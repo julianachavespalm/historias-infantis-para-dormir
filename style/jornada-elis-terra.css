@@ -1,0 +1,13 @@
+.description {
+    padding-top: 360px;
+    background: linear-gradient(to bottom, transparent 0%, rgba(26, 29, 41, 1) 90%), url('../img/incrivel-jornada-elis-terra.jpg') no-repeat center center;
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    font-size: 0.75rem;
+}
