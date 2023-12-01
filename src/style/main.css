@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
+
+:root{
+    --bluish-gray: rgb(26, 29, 41);
+    --black: rgb(18, 20, 19);
+    --white: rgb(242, 242, 242) ;
+    --orange: #ffc35b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bluish-gray);
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: var(--white);
+    line-height: 1.5;
+}
+
+.banner {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px;
+
+    border-top-left-radius:  20px;
+    border-top-right-radius: 20px;
+
+    background: linear-gradient(to bottom, rgb(18, 20, 19), transparent);
+    
+    
+    backdrop-filter: blur(70px);
+    -webkit-backdrop-filter: blur(70px);
+    z-index: 1;
+}
+
+    .banner__logo-container {
+        text-decoration: none;
+    }
+
+    .banner__logo-container:visited,
+    .banner__logo-container:hover {
+        color: var(--white);
+        text-decoration: none;
+    }
+
+        .banner__logo {
+            width: 150px;
+
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--white);
+            text-align: right;
+            line-height: 1;
+        }
+
+        
+
+        .banner__logo--small {
+            font-size: 0.75rem;
+            text-align: right;
+        }
+
+        .banner__menu { list-style: none; }
+
+        .banner__link {
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .banner__link:visited { color: var(--white); }
+
+        .banner__link:hover {
+            text-decoration: underline;
+            color: var(--orange);
+            transition: color .4s;
+        }
+
+
+
+.content {
+    padding: 300px 60px 60px 60px;
+}
+
+    .content__title { font-size: 2rem;}
+
+    .content__text {text-indent: 40px;}
+
+    .content__text p { margin: 30px 0;}
+
+
+
+
+
+.social-media {
+    padding: 150px 60px 60px 60px;
+
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+    .social-media__copyright { margin: 30px 0;}
+
+    .social-media__copyright p { margin: 15px 0}
+
+    .social-media__contact {
+        display: inline;
+        list-style-type: none;
+        margin: 0 5px;
+    }
+
+    .social-media__link {
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    .social-media__link:visited { color: var(--white); }
+
+    .social-media__link:hover {
+        text-decoration: underline;
+        color: var(--orange);
+            }
+
+    .social-media__link--orange { color: var(--orange);}
