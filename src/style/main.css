@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
 
 :root{
-    --bluish-gray: rgb(26, 29, 41);
-    --black: rgb(18, 20, 19);
-    --white: rgb(242, 242, 242) ;
+    --bluish-gray: #1a1d29;
+    --black: #121413;
+    --white: #f2f2f2 ;
     --orange: #ffc35b;
 }
+
+/*---------------------
+Global
+---------------------*/
 
 * {
     margin: 0;
@@ -14,6 +18,11 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     background-color: var(--bluish-gray);
     
     font-family: 'Montserrat', sans-serif;
@@ -22,26 +31,33 @@ body {
     line-height: 1.5;
 }
 
-.banner {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 40px;
+.icon { margin: 0 10px 0 0;}
 
+/*---------------------
+Header
+---------------------*/
+.banner {
     border-top-left-radius:  20px;
     border-top-right-radius: 20px;
 
     background: linear-gradient(to bottom, rgb(18, 20, 19), transparent);
     
+    font-size: 0.875rem;
     
     backdrop-filter: blur(70px);
     -webkit-backdrop-filter: blur(70px);
-    z-index: 1;
+    z-index: 3;
 }
 
+    .banner__acessibilities-dropdown {
+        list-style: none;
+    }
+
+    .banner__buttons {
+        list-style: none;
+    }
+
+    
     .banner__logo-container {
         text-decoration: none;
     }
@@ -51,83 +67,238 @@ body {
         color: var(--white);
         text-decoration: none;
     }
+    .banner__logo {
+        width: 150px;
 
-        .banner__logo {
-            width: 150px;
-
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2rem;
-            font-weight: 400;
-            color: var(--white);
-            text-align: right;
-            line-height: 1;
-        }
-
-        
-
-        .banner__logo--small {
-            font-size: 0.75rem;
-            text-align: right;
-        }
-
-        .banner__menu { list-style: none; }
-
-        .banner__link {
-            text-decoration: none;
-            color: var(--white);
-        }
-
-        .banner__link:visited { color: var(--white); }
-
-        .banner__link:hover {
-            text-decoration: underline;
-            color: var(--orange);
-            transition: color .4s;
-        }
-
-
-
-.content {
-    padding: 300px 60px 60px 60px;
-}
-
-    .content__title { font-size: 2rem;}
-
-    .content__text {text-indent: 40px;}
-
-    .content__text p { margin: 30px 0;}
-
-
-
-
-
-.social-media {
-    padding: 150px 60px 60px 60px;
-
-    font-size: 0.75rem;
-    text-align: center;
-}
-
-    .social-media__copyright { margin: 30px 0;}
-
-    .social-media__copyright p { margin: 15px 0}
-
-    .social-media__contact {
-        display: inline;
-        list-style-type: none;
-        margin: 0 5px;
-    }
-
-    .social-media__link {
-        text-decoration: none;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 2rem;
+        font-weight: 400;
         color: var(--white);
+        line-height: 1;
     }
 
-    .social-media__link:visited { color: var(--white); }
+    .banner__link { 
+        color: inherit;
+        text-decoration: none;
+    }
 
-    .social-media__link:hover {
-        text-decoration: underline;
-        color: var(--orange);
+    .banner__link:visited { 
+        color: inherit;
+    }
+
+    .banner__link:hover, .banner__link:focus { 
+        background-color: var(--orange);
+        color: var(--bluish-gray);
+        font-weight: bold;
+    }
+
+    .banner__logo--small {
+        font-size: 0.75rem;
+    }
+
+    .banner__menu-toggle {
+        --s: 15px; /* controla o tamanho */
+        --c: #f2f2f2; /* define a cor */
+        
+        height: var(--s);
+        aspect-ratio: 1;
+        border: none;
+        padding: 0;
+        border-inline: calc(var(--s)/2) solid #0000; 
+        box-sizing: content-box;
+        --_g1: linear-gradient(var(--c) 20%,#0000 0 80%,var(--c) 0) 
+            no-repeat content-box border-box;
+        --_g2: radial-gradient(circle closest-side at 50% 12.5%,var(--c) 95%,#0000) 
+            repeat-y content-box border-box;
+        background: 
+        var(--_g2) left  var(--_p,0px) top,
+        var(--_g1) left  calc(var(--s)/10 + var(--_p,0px)) top,
+        var(--_g2) right var(--_p,0px) top,
+        var(--_g1) right calc(var(--s)/10 + var(--_p,0px)) top;
+        background-size: 
+        20%  80%,
+        40% 100%;
+        position: relative;
+        clip-path: inset(0 25%);
+        -webkit-mask: linear-gradient(90deg,#0000,#000 25% 75%,#0000);
+        cursor: pointer;
+        transition: 
+        background-position .3s var(--_s,.3s), 
+        clip-path 0s var(--_s,.6s);
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        appearance:none;
+
+        cursor: pointer;
+    }
+
+        .banner__menu-toggle:before,
+        .banner__menu-toggle:after {
+            content:"";
+            position: absolute;
+
+            border-radius: var(--s);
+            inset: 40% 0;
+
+            background: var(--c);
+
+            transition: transform .3s calc(.3s - var(--_s,.3s));
+        }
+    
+        .banner__menu-toggle:checked {
+            clip-path: inset(0);
+            --_p: calc(-1*var(--s));
+            --_s: 0s;
+        }
+
+            .banner__menu-toggle:checked:before { transform: rotate(45deg); }
+
+            .banner__menu-toggle:checked:after  { transform: rotate(-45deg); }
+
+            .banner__menu-toggle:focus-visible {
+                border: none;
+                outline: 2px solid var(--c);
+                outline-offset: 5px;
+                
+                clip-path: none;
+                -webkit-mask: none; 
             }
 
-    .social-media__link--orange { color: var(--orange);}
+    .banner__menu { 
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .banner__menu-toggle {
+        position: relative;
+    }
+
+    .banner__menu-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 180px;
+        padding: 10px;
+        margin: 0 auto;
+        box-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
+
+        border: 2px solid var(--jet-black-color);
+        border-radius: 5px;
+
+        background-color: var(--bluish-gray);
+
+        list-style: none;
+
+        z-index: 2;
+    }
+
+
+    .banner__menu-item {
+        margin: 10px;
+    }
+   
+    .banner__menu-toggle:checked +
+    .banner__menu-label +
+    .banner__menu-dropdown  {
+            display: block;
+        }
+
+@media (max-width: 540px) {
+    .banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        margin: 5px 5px;
+        width: calc(100vw - 10px);
+        padding: 10px;
+    }
+
+    .banner__acessibilities { 
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .banner__accessibilities-toggle {
+        display: none;
+        position: relative
+    }
+
+    .banner__acessibilities-dropdown { 
+        display: none;
+        position: absolute;
+        margin: 0 auto;
+        top: calc(100% +5px);
+
+        width: 180px;
+        padding: 10px;
+        box-shadow: 3px 3px 3px rgb(0, 0, 0, 80);   
+    
+        border-radius: 5px;
+
+        background-color: var(--bluish-gray);
+    
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        z-index: 1;
+    }
+
+    .banner__buttons--row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    
+    .banner__accessibilities-toggle:checked + .banner__acessibilities-label + .banner__acessibilities-dropdown  {
+            display: block;
+        }
+    
+    .banner__acessibilities-buttons { display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .banner__acessibilities-item {
+        display: flex; 
+        justify-content: center;
+        margin: 7.5px 0;
+
+    }
+
+
+    .banner__menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .banner__menu-toggle {
+        position: relative;
+    }
+
+    .banner__logo-container { 
+        margin: 15px 0;
+        
+        text-align: center;
+    }
+
+    .banner__acessibilities-label {
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+   
+    .banner__menu-item { margin: 7.5px 0;}
+
+}
+
+
+
+@media (min-width: 540px) {
+    .banner{
+        display: flex;
+        flex-direction: column;
+    }
+
+}

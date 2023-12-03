@@ -15,30 +15,93 @@
     <!--Estilo personalizado-->
     <link rel="stylesheet" href="src/style/index.css">
     <!-- Fontes do Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <header class="banner" id="top">
-        <nav class="banner__top-nav">
-            <a href="index.html" class="banner__logo-container">
-                <h1 class="banner__logo">CONTOS PARA<br> O SONINHO</h1>
-                <p class="banner__logo banner__logo--small" >© Juliana Chaves Palm</p>
-            </a>
-            <ul class="banner__menu" role="menu" title="Menu Principal">
-                <li class="banner__menu-item" role="menuitem"><a class="banner__link" href="src/pages/menu.html"><i class="fa-solid fa-list"></i>Menu de histórias</a></li>
-                <li class="banner__menu-item" role="menuitem"><a class="banner__link" href="src/pages/no-images.html"><i class="fa-solid fa-font"></i> Modo de exibição sem imagens</a></li>
-                <li class="banner__menu-item" role="menuitem"><a class="banner__link" href="src/pages/sobre.html"><i class="fa-solid fa-user"></i>Sobre mim</a></li>
-            </ul>
+        <nav class="banner__acessibilities">
+            <input type="checkbox" id="accessibilities-toggle" class="banner__accessibilities-toggle">
+            <label for="accessibilities-toggle" class="banner__acessibilities-label" id="open-acessibilities" aria-label="Menu de acessibilidade" title="Menu de acessibilidade" accesskey="3">
+                <span class="material-symbols-rounded icon" aria-disabled="true">settings_accessibility</span>
+                Acessibilidade
+            </label>
+            <ul class="banner__acessibilities-dropdown">
+                <li class="banner__acessibilities-item">
+                    <ul class="banner__buttons banner__buttons--row">
+                        <li class="banner__acessibilities-item">
+                            <button class="banner__btn" id="increaseFont" title="Aumentar fonte" aria-label="Aumentar fonte">
+                                <span class="material-symbols-rounded ">text_increase</span>
+                            </button>
+                        </li>
+                        <li class="banner__acessibilities-item">
+                            <button class="banner__btn" id="decreaseFont" title="Diminuir fonte" aria-label="Diminuir fonte">
+                                <span class="material-symbols-rounded">text_decrease
+                                    </span>
+                            </button>
+                        </li>
+                        <li class="banner__acessibilities-item">
+                            <button class="banner__btn" id="reset" title="Desfazer alterações" aria-label="Desfazer alterações">
+                                <span class="material-symbols-outlined " aria-disabled="true">restart_alt</span>
+                            </button>
+                        </li>
+                        <li class="banner__acessibilities-item banner__acessibilities-item--mr-10">
+                            <button class="banner__btn" id="highContrastToggle" aria-label="Alto contraste" title="Alto contraste">
+                                <span class="material-symbols-outlined" aria-disabled="true">settings_night_sight
+                                    </span>
+                            </button>
+                        </li>
+                    </ul>  
+                </li>   
+                <li  class="banner__acessibilities-item">
+                    <a href="#accessibility" class="banner__link">Acessibilidade do site</a>
+                </li>
+            </ul> 
         </nav>
-        <section class="banner__acessibilities">
-            
-        </section>
+        <section class="banner--2nd-line">
+            <div class="banner__logo-container">
+                <a href="index.html" class="banner__link">
+                    <h1 class="banner__logo">CONTOS PARA<br> O SONINHO</h1>
+                    <p class="banner__logo banner__logo--small" >© Juliana Chaves Palm</p>
+                </a>
+            </section>
+            <nav class="banner__menu">
+                <input type="checkbox" id="menu-toggle" class="banner__menu-toggle" title="Menu principal" aria-label="Menu principal">
+                <label for="menu-toggle" class="banner__menu-label" id="open-menu" aria-label="Menu principal" title="Menu de principal" accesskey="4">
+                    Menu
+                </label>
+                <ul class="banner__menu-dropdown" role="menu" title="Menu Principal">
+                    <li class="banner__menu-item" role="menuitem">
+                        <a class="banner__link" href="src/pages/menu.html">
+                            <i class="fa-solid fa-book icon" aria-disabled="true"></i>Histórias
+                        </a>
+                    </li>
+                    <li class="banner__menu-item" role="menuitem">
+                        <a class="banner__link" href="src/pages/no-images.html">
+                            <i class="fa-solid fa-font icon"></i>
+                            Site sem imagens
+                        </a>
+                    </li>
+                    <li class="banner__menu-item" role="menuitem">
+                        <a class="banner__link" href="src/pages/sobre.html">
+                            <i class="fa-solid fa-user icon"></i>Sobre mim
+                        </a>
+                    </li>
+                </ul>
+            </nav> 
+        </section> 
     </header>
     <main class="content" id="content">
         <section class="text-info" role="main">
             <h2 class="content__title">CONTOS PARA O SONINHO</h2>
             <div class="content__text">
-                <p>Olá, sou <strong>Juliana Chaves Palm,</strong> a mente por trás deste site de <strong>Contos para o Soninho.</strong> Criei essas histórias para as crianças da minha família e agora estou compartilhando com você.</p>
-                <p>No topo da página, você pode alternar para a versão do site sem imagens, tornando a experiência mais leve e acessível. Além disso, na margem direita do site, há um ícone com duas mãos, clicando nele, você ativa a tradução para a Língua Brasileira de Sinais (Libras), tornando nosso conteúdo ainda mais acessível a todos os leitores. Sejam bem vindos!</p>
+                <p>Olá, sou <strong class="content__text--orange">Juliana Chaves Palm,</strong> a mente por trás deste site de <strong class="content__text--orange">Contos para o Soninho.</strong> Criei essas histórias para as crianças da minha família e agora estou compartilhando com você.</p>
+
+            <h2 class="content__title">ENCONTRE NOSSAS HISTÓRIAS</h2>
+                <p>No topo da página, clique no ícone <strong class="content__text--orange">☰</strong> selecione a opção "Histórias" e encontre diversas histórias para compartilhar com sua família.</p>
+
+            <h2 class="content__title">DESCUBRA NOSSA ACESSIBILIDADE</h2>
+                <p>Queremos que todos tenham uma experiência incrível aqui. Quer saber mais sobre como tornamos nosso site acessível para todos? Confira nossa <a href="pages/acessibilities.html" class="content__link">documentação de acessibilidade</a> para entender todas as ferramentas disponíveis.</p>
             </div>
         </section>
     </main>
