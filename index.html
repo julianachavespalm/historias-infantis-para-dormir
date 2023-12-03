@@ -12,6 +12,7 @@
     <!-- Estilo básico para todas as páginas -->
     <link rel="stylesheet" href="src/style/main.css">
     <link rel="stylesheet" href="src/style/responsive.css">
+    <link rel="stylesheet" href="src/style/dark.css">
     <!--Estilo personalizado-->
     <link rel="stylesheet" href="src/style/index.css">
     <!-- Fontes do Google -->
@@ -64,7 +65,7 @@
                     <h1 class="banner__logo">CONTOS PARA<br> O SONINHO</h1>
                     <p class="banner__logo banner__logo--small" >© Juliana Chaves Palm</p>
                 </a>
-            </section>
+            </div>
             <nav class="banner__menu">
                 <input type="checkbox" id="menu-toggle" class="banner__menu-toggle" title="Menu principal" aria-label="Menu principal">
                 <label for="menu-toggle" class="banner__menu-label" id="open-menu" aria-label="Menu principal" title="Menu de principal" accesskey="4">
@@ -91,16 +92,22 @@
             </nav> 
         </section> 
     </header>
-    <main class="content" id="content">
-        <section class="text-info" role="main">
+    <main id="content" class="content">
+        <section class="content__info" role="main">
             <h2 class="content__title">CONTOS PARA O SONINHO</h2>
             <div class="content__text">
                 <p>Olá, sou <strong class="content__text--orange">Juliana Chaves Palm,</strong> a mente por trás deste site de <strong class="content__text--orange">Contos para o Soninho.</strong> Criei essas histórias para as crianças da minha família e agora estou compartilhando com você.</p>
-
+            </div>
+        </section>
+        <section class="content__info" role="main">
             <h2 class="content__title">ENCONTRE NOSSAS HISTÓRIAS</h2>
+            <div class="content__text">
                 <p>No topo da página, clique no ícone <strong class="content__text--orange">☰</strong> selecione a opção "Histórias" e encontre diversas histórias para compartilhar com sua família.</p>
-
+            </div>
+        </section>
+        <section class="content__info" role="main">
             <h2 class="content__title">DESCUBRA NOSSA ACESSIBILIDADE</h2>
+            <div class="content__text">
                 <p>Queremos que todos tenham uma experiência incrível aqui. Quer saber mais sobre como tornamos nosso site acessível para todos? Confira nossa <a href="pages/acessibilities.html" class="content__link">documentação de acessibilidade</a> para entender todas as ferramentas disponíveis.</p>
             </div>
         </section>
@@ -143,5 +150,6 @@
     <script src="src/js/owl/jquery.min.js"></script>
     <script src="src/js/owl/owl.carousel.min.js"></script>
     <script src="src/js/owl/setup.js"></script>
+    <script src="src/js/owl/resposive.js"></script>
 </body>
 </html>

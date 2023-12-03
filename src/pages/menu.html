@@ -1,64 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <!-- Desenvolvido por Juliana Chaves Palm -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu: Histórias para Dormir</title>
+    <meta name="description" content="Encontre aqui histórias infantis encantadoras para ajudar as crianças a dormir. Juliana Chaves Palm compartilha narrativas divertidas, adaptadas para uma noite tranquila. Descubra um mundo mágico de contos!">
+    <meta name="subject" content="Histórias Infantis para Dormir">
+    <title>Menu: Contos para o Soninho</title>
     <!-- Owl Carousel: obrigatório para carrosel de imagens -->
-    <link rel="stylesheet" href="../style/owl/owl.carousel.min.css">
-    <link rel="stylesheet" href="../style/owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl/owl.theme.default.min.css">
     <!-- Estilo básico para todas as páginas -->
     <link rel="stylesheet" href="../style/main.css">
     <link rel="stylesheet" href="../style/responsive.css">
+    <link rel="stylesheet" href="../style/dark.css">
     <!--Estilo personalizado-->
-    <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet" href="../style/index.css">
     <!-- Fontes do Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <header class="container">
-        <div><p class="logo">Histórias Infantis <br>para Dormir <br>Juliana Chaves Palm</p></div>
-        <nav class="primary-menu" arial-label="Menu principal" role="menu">
-            <ul><li><a href="../index.html" role="menuitem"><i class="fa-solid fa-house"></i>Página inicial</a></li>
-                <li><a href="menu.html" role="menuitem"><i class="fa-solid fa-list"></i>Menu de histórias</a></li>
-                <li><a href="sobre.html" role="menuitem"><i class="fa-solid fa-user"></i>Sobre mim</a></li>
-                <li><a href="no-images.html" role="menuitem" class="no-image"><i class="fa-solid fa-font"></i> Modo de exibição sem imagens</a></li>
-            </ul>
+    <header class="banner" id="top">
+        <nav class="banner__acessibilities">
+            <input type="checkbox" id="accessibilities-toggle" class="banner__accessibilities-toggle">
+            <label for="accessibilities-toggle" class="banner__acessibilities-label" id="open-acessibilities" aria-label="Menu de acessibilidade" title="Menu de acessibilidade" accesskey="3">
+                <span class="material-symbols-rounded icon" aria-disabled="true">settings_accessibility</span>
+                Acessibilidade
+            </label>
+            <ul class="banner__acessibilities-dropdown">
+                <li class="banner__acessibilities-item">
+                    <ul class="banner__buttons banner__buttons--row">
+                        <li class="banner__acessibilities-item">
+                            <button class="banner__btn" id="increaseFont" title="Aumentar fonte" aria-label="Aumentar fonte">
+                                <span class="material-symbols-rounded ">text_increase</span>
+                            </button>
+                        </li>
+                        <li class="banner__acessibilities-item">
+                            <button class="banner__btn" id="decreaseFont" title="Diminuir fonte" aria-label="Diminuir fonte">
+                                <span class="material-symbols-rounded">text_decrease
+                                    </span>
+                            </button>
+                        </li>
+                        <li class="banner__acessibilities-item">
+                            <button class="banner__btn" id="reset" title="Desfazer alterações" aria-label="Desfazer alterações">
+                                <span class="material-symbols-outlined " aria-disabled="true">restart_alt</span>
+                            </button>
+                        </li>
+                        <li class="banner__acessibilities-item banner__acessibilities-item--mr-10">
+                            <button class="banner__btn" id="highContrastToggle" aria-label="Alto contraste" title="Alto contraste">
+                                <span class="material-symbols-outlined" aria-disabled="true">settings_night_sight
+                                    </span>
+                            </button>
+                        </li>
+                    </ul>  
+                </li>   
+                <li  class="banner__acessibilities-item">
+                    <a href="../pages/accessibility" class="banner__link">Acessibilidade do site</a>
+                </li>
+            </ul> 
         </nav>
+        <section class="banner--2nd-line">
+            <div class="banner__logo-container">
+                <a href="index.html" class="banner__link">
+                    <h1 class="banner__logo">CONTOS PARA<br> O SONINHO</h1>
+                    <p class="banner__logo banner__logo--small" >© Juliana Chaves Palm</p>
+                </a>
+            </div>
+            <nav class="banner__menu">
+                <input type="checkbox" id="menu-toggle" class="banner__menu-toggle" title="Menu principal" aria-label="Menu principal">
+                <label for="menu-toggle" class="banner__menu-label" id="open-menu" aria-label="Menu principal" title="Menu de principal" accesskey="4">
+                    Menu
+                </label>
+                <ul class="banner__menu-dropdown" role="menu" title="Menu Principal">
+                    <li class="banner__menu-item" role="menuitem">
+                        <a class="banner__link" href="src/pages/menu.html">
+                            <i class="fa-solid fa-book icon" aria-disabled="true"></i>Histórias
+                        </a>
+                    </li>
+                    <li class="banner__menu-item" role="menuitem">
+                        <a class="banner__link" href="src/pages/no-images.html">
+                            <i class="fa-solid fa-font icon"></i>
+                            Site sem imagens
+                        </a>
+                    </li>
+                    <li class="banner__menu-item" role="menuitem">
+                        <a class="banner__link" href="src/pages/sobre.html">
+                            <i class="fa-solid fa-user icon"></i>Sobre mim
+                        </a>
+                    </li>
+                </ul>
+            </nav> 
+        </section> 
     </header>
-    <main class="main-content">
-        <div class="owl-carousel owl-theme">
-            <div class="item"><a href="../pages/aventura-zumbuz-zinabel.html"><img class="box-filme" src="../img/carousel/aventura-zumbuz-zinabel-carousel.jpg" alt="">1 de 5<p>A AVENTURA DE ZUMBUZ E ZINABEL</p></a></div>
-            <div class="item"><a href="../pages/jornada-elis-terra.html"><img class="box-filme" src="../img/carousel/jornada-elis-terra-carousel.jpg" alt="">2 de 5<p>A JORNADA DE ELEIS NA TERRA</p></a></div>
-            <div class="item"><a href="../pages/dante-caminho-letras.html"><img class="box-filme" src="../img/carousel/dante-caminho-letras-carousel.jpg" alt="">3 de 5<p>DANTE E O CAMINHO DAS LETRAS</p></a></div>
-            <div class="item"><a href="../pages/orquidea-tom-lacos-amor.html"><img class="box-filme" src="../img/carousel/orquidea-tom-lacos-amor-carousel.jpg" alt="">4 de 5 <p>ORQUÍDEA, TOM E OS LAÇOS DE AMOR</p></a></div>
-            <div class="item"><a href="../pages/renato-robo-costureiro.html"><img class="box-filme" src="../img/carousel/renato-robo-costureiro-carousel.jpg" alt="">5 de 5<p>RENATO, O ROBÔ COSTUREIRO</p></a></div>
-        </div>
+    <main id="content" class="content">
+        <section class="content__info" role="main">
+            <div class="owl-carousel owl-theme">
+                <div class="item"><a class="content__link" href="../pages/aventura-zumbuz-zinabel.html"><img class="content__img" src="../img/carousel/aventura-zumbuz-zinabel-carousel.jpg" alt=""><p>A AVENTURA DE ZUMBUZ E ZINABEL</p></a></div>
+                <div class="item"><a class="content__link" href="../pages/jornada-elis-terra.html"><img class="content__img" src="../img/carousel/jornada-elis-terra-carousel.jpg" alt=""><p>A JORNADA DE ELIS NA TERRA</p></a></div>
+                <div class="item"><a class="content__link" href="../pages/dante-caminho-letras.html"><img class="content__img" src="../img/carousel/dante-caminho-letras-carousel.jpg" alt=""><p>DANTE E O CAMINHO DAS LETRAS</p></a></div>
+                <div class="item"><a class="content__link" href="../pages/orquidea-tom-lacos-amor.html"><img class="content__img" src="../img/carousel/orquidea-tom-lacos-amor-carousel.jpg" alt=""><p>ORQUÍDEA, TOM E OS LAÇOS DE AMOR</p></a></div>
+                <div class="item"><a class="content__link" href="../pages/renato-robo-costureiro.html"><img class="content__img" src="../img/carousel/renato-robo-costureiro-carousel.jpg" alt=""><p>RENATO, O ROBÔ COSTUREIRO</p></a></div>
+            </div>
+        </section>
     </main>
-<footer>
-    <p>&copy; Juliana Chaves Palm 2023 - Todos os direitos reservados.</p>
-    <p>O conteúdo deste site, incluindo histórias e personagens, é de autoria exclusiva de Juliana Chaves Palm e está protegido por direitos autorais. Qualquer uso não autorizado, incluindo a reprodução, distribuição ou modificação, é estritamente proibido. Para solicitar permissão de uso ou obter mais informações, entre em contato conosco <a href="mailto:julianachavespalm@hotmail.com">aqui.</a></p>
-    <p>Todas as marcas registradas e logotipos mencionados são propriedade de seus respectivos proprietários.</p>
-    <address><a href="https://www.linkedin.com/in/julianachavespalm" target="_blank">LinkedIn</a>  <a href="https://github.com/julianachavespalm" target="_blank">GitHub</a></address>
-    <p>Este site cumpre as leis de direitos autorais e promove o respeito aos direitos dos criadores. Se você acredita que algum conteúdo deste site infringe os direitos autorais de terceiros, entre em contato conosco imediatamente.</p>
-    <p>Agradecemos por respeitar nossos direitos autorais.</p>
-</footer>
-<div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-<script src="https://kit.fontawesome.com/e0954b0c75.js" crossorigin="anonymous"></script>
-<script src="../js/owl/jquery.min.js"></script>
-<script src="../js/owl/owl.carousel.min.js"></script>
-<script src="../js/owl/setup.js"></script>
+    <footer class="social-media">
+        <section class="social-media__copyright">
+            <p>&copy; Juliana Chaves Palm 2023 - Todos os direitos reservados.</p>
+            <p>O conteúdo deste site, incluindo histórias e personagens, é de autoria exclusiva de Juliana Chaves Palm e está protegido por direitos autorais. Qualquer uso não autorizado, incluindo a reprodução, distribuição ou modificação, é estritamente proibido. Para solicitar permissão de uso ou obter mais informações, entre em contato conosco <a class="social-media__link social-media__link--orange" href="mailto:julianachavespalm@hotmail.com">aqui.</a></p>
+            <p>Todas as marcas registradas e logotipos mencionados são propriedade de seus respectivos proprietários.</p>
+        </section>
+        <address>
+            <ul class="social-media__contacts">
+                <li class="social-media__contact">
+                    <a class="social-media__link" href="mailto:julianachavespalm@gmail.com">E-mail</a>       
+                </li>
+                <li class="social-media__contact">
+                    <a class="social-media__link" href="https://www.linkedin.com/in/julianachavespalm" target="_blank" rel="noopener noreferrer">LinkedIn</a>        
+                </li>
+                <li class="social-media__contact">
+                    <a class="social-media__link" href="https://github.com/julianachavespalm" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </li>
+            </ul>
+        </address>
+        <section class="social-media__copyright">
+            <p>Este site cumpre as leis de direitos autorais e promove o respeito aos direitos dos criadores. Se você acredita que algum conteúdo deste site infringe os direitos autorais de terceiros, entre em contato conosco imediatamente.</p>
+            <p>Agradecemos por respeitar nossos direitos autorais.</p>
+        </section>
+    </footer>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    <script src="https://kit.fontawesome.com/e0954b0c75.js" crossorigin="anonymous"></script>
+    <script src="../js/owl/jquery.min.js"></script>
+    <script src="../js/owl/owl.carousel.min.js"></script>
+    <script src="../js/owl/setup.js"></script>
+    <script src="../js/resposive.js"></script>
 </body>
 </html>

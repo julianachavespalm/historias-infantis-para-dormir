@@ -1,0 +1,125 @@
+.high-contrast-theme,
+.high-contrast-theme body
+ {
+    background-color: white;
+
+    color: black;
+}
+
+.high-contrast-theme .banner {
+    border-top-left-radius:  20px;
+    border-top-right-radius: 20px;
+
+    background: linear-gradient(to bottom, rgb(220, 220, 220), transparent);
+    
+    font-size: 0.875rem;
+    
+    backdrop-filter: blur(70px);
+    -webkit-backdrop-filter: blur(70px);
+    z-index: 3;
+}
+
+
+.high-contrast-theme .banner__btn {
+    background-color: #fff;
+    color: #000;
+}
+
+.high-contrast-theme .banner__acessibilities .banner__link:hover {
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.high-contrast-theme .banner__menu-dropdown {
+    background-color: #fff;
+}
+
+.high-contrast-theme .banner__menu-toggle {
+    --s: 15px; /* controla o tamanho */
+    --c: #000; /* define a cor */
+
+    position: relative;
+    
+    height: var(--s);
+    aspect-ratio: 1;
+    border: none;
+    padding: 0;
+    border-inline: calc(var(--s)/2) solid #0000; 
+    box-sizing: content-box;
+    --_g1: linear-gradient(var(--c) 20%,#0000 0 80%,var(--c) 0) 
+        no-repeat content-box border-box;
+    --_g2: radial-gradient(circle closest-side at 50% 12.5%,var(--c) 95%,#0000) 
+        repeat-y content-box border-box;
+    background: 
+    var(--_g2) left  var(--_p,0px) top,
+    var(--_g1) left  calc(var(--s)/10 + var(--_p,0px)) top,
+    var(--_g2) right var(--_p,0px) top,
+    var(--_g1) right calc(var(--s)/10 + var(--_p,0px)) top;
+    background-size: 
+    20%  80%,
+    40% 100%;
+    position: relative;
+    clip-path: inset(0 25%);
+    -webkit-mask: linear-gradient(90deg,#0000,#000 25% 75%,#0000);
+    cursor: pointer;
+    transition: 
+    background-position .3s var(--_s,.3s), 
+    clip-path 0s var(--_s,.6s);
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+
+.high-contrast-theme .banner__logo {
+    color: #000;
+}
+
+
+.high-contrast-theme .banner__link {
+    color: #0000ff;
+}
+
+.high-contrast-theme .banner__menu .banner__link:hover {
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.high-contrast-theme .social-media {
+    border-top-left-radius:  20px;
+    border-top-right-radius: 20px;
+
+    background: linear-gradient(to top, rgb(220, 220, 220), transparent);
+    
+    font-size: 0.875rem;
+    
+    backdrop-filter: blur(70px);
+    -webkit-backdrop-filter: blur(70px);
+    z-index: 3;
+}
+
+.high-contrast-theme .content__link {
+    color: #0000ff;
+    transition: background-color 0.8s ease;
+}
+
+.high-contrast-theme .content__link:hover,
+.high-contrast-theme .content__link:hover {
+    background-color: #ffd690;
+}
+
+.high-contrast-theme .social-media__link {
+    color: #0000ff;
+    transition: background-color 0.8s ease;
+
+}
+
+.high-contrast-theme .social-media__link:hover,
+.high-contrast-theme .social-media__link:hover {
+    background-color: #ffd690;
+}
+
+@media (max-width: 540px) {
+    .high-contrast-theme .banner__acessibilities-dropdown {
+        background-color: #fff;
+    }
+}
